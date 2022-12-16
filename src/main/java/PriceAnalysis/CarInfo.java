@@ -35,9 +35,20 @@ public class CarInfo {
             if (e.startsWith("Двигатель: "))
             {
                 String[] temp = e.split(": ")[1].split(", ");
-                this.engineType = temp[0];
-                this.engineVolume = Integer.parseInt(temp[1].substring(0,temp[1].indexOf(" ")));
-                this.enginePower = Integer.parseInt(temp[2].replaceAll("[^0-9]",""));
+                for (String s:temp) {
+                    if (e.startsWith("Б")||e.startsWith("Д")||e.startsWith("Э")||e.startsWith("Г"))
+                    {
+                        this.engineType = s;
+                    }
+                    if (e.endsWith("см3"))
+                    {
+                        this.engineVolume = Integer.parseInt(s.substring(0, s.indexOf(" ")));
+                    }
+                    if (e.endsWith("л.с."))
+                    {
+                        Integer.parseInt(e.replaceAll("[^0-9]", ""));
+                    }
+                }
             }
 
 

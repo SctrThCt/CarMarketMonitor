@@ -22,7 +22,7 @@ public class Main {
 
 
         URL url = new URL("https://autosakhcom.ru/sale/1620790");
-        String ur1 = "https://auto.693006.ru/sale/1631962/";
+        String ur1 = "https://autosakhcom.ru/sale/1631462/";
         ArrayList<String> carInfo = null;
         try {
             carInfo = GetData.getCarInfo(ur1);
