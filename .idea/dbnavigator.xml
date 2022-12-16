@@ -15,17 +15,13 @@
     <connection id="3fe46c97-255e-4389-9f34-5c246070c2c8">
       <console name="new_schema" type="STANDARD" schema="new_schema" session="Main" />
       <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
-      <console name="new_schema 1" type="STANDARD" schema="new_schema" session="Main" />
     </connection>
     <connection id="deb1b2c4-a745-415f-a62c-3163f02801a1">
       <console name="Connection" type="STANDARD" schema="mysql" session="Main" />
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
