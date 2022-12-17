@@ -35,18 +35,22 @@ public class CarInfo {
             if (e.startsWith("Двигатель: "))
             {
                 String[] temp = e.split(": ")[1].split(", ");
+                for (String t:temp)
+                {
+                    System.out.println(t);
+                }
                 for (String s:temp) {
-                    if (e.startsWith("Б")||e.startsWith("Д")||e.startsWith("Э")||e.startsWith("Г"))
+                    if (s.startsWith("Б")||s.startsWith("Д")||s.startsWith("Э")||s.startsWith("Г"))
                     {
                         this.engineType = s;
                     }
-                    if (e.endsWith("см3"))
+                    if (s.endsWith(" см3"))
                     {
                         this.engineVolume = Integer.parseInt(s.substring(0, s.indexOf(" ")));
                     }
-                    if (e.endsWith("л.с."))
+                    if (s.endsWith(" л.с."))
                     {
-                        Integer.parseInt(e.replaceAll("[^0-9]", ""));
+                        this.enginePower = Integer.parseInt(s.substring(0, s.indexOf(" ")));
                     }
                 }
             }
@@ -59,20 +63,19 @@ public class CarInfo {
 
     @Override
     public String toString() {
-        return "CarInfo{" +
-                "id=" + id +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", modelName='" + modelName + '\'' +
-                ", price=" + price +
-                ", year=" + year +
-                ", bodyType='" + bodyType + '\'' +
-                ", transmission='" + transmission + '\'' +
-                ", engineType='" + engineType + '\'' +
-                ", engineVolume=" + engineVolume +
-                ", enginePower=" + enginePower +
-                ", driveType='" + driveType + '\'' +
-                ", mileage=" + mileage +
-                ", city='" + city + '\'' +
-                '}';
+        return  id+"/"+
+                manufacturer+"/"+
+                modelName+"/"+
+                price+"/"+
+                year+"/"+
+                bodyType+"/"+
+                transmission+"/"+
+                engineType+"/"+
+                engineVolume+"/"+
+                enginePower+"/"+
+                driveType+"/"+
+                mileage+"/"+
+                city;
+
     }
 }
